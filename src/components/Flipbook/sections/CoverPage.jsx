@@ -13,11 +13,8 @@ const CoverPage = forwardRef((_, ref) => {
           </p>
         </div>
         <div className="overflow-hidden">
-          <img
-            src="src/assets/bf4a7eb8-def8-4f42-ae22-798b343ddb97.png"
-            className="absolute size-50"
-          />
-          <img src="src/assets/upscaled_image.png" className="object-cover" />
+          <img src="src/assets/logo.webp" className="absolute size-50" />
+          <img src="src/assets/game_cover.webp" className="object-cover" />
           <p className="relative bottom-55 left-70 text-white italic text-2xl font-semibold">
             Resume Booklet
           </p>
