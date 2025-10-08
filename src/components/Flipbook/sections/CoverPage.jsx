@@ -2,13 +2,19 @@ import { forwardRef } from "react";
 
 const CoverPage = forwardRef((_, ref) => {
   return (
-    <div ref={ref} className="w-[640px] h-[600px]">
-      <div className="grid grid-cols-[130px_1fr] w-160 h-150 shadow-[0_2px_8px_rgba(0,0,0,0.25)] rounded-md">
-        <div className="flex flex-col py-5 items-center bg-linear-to-t from-zinc-200 via-zinc-500 to-zinc-200">
-          <p className="text-center text-red-600 text-lg font-semibold border-3 border-red-600 rounded-full w-25">
-            Nick Vila
-          </p>
-          <p className="text-7xl rotate-270 relative top-55 font-bold italic text-[#3669B5]">
+    <div
+      ref={ref}
+      className="relative w-full h-full overflow-hidden rounded-l-md shadow-md font-inter"
+    >
+      <div className="grid grid-cols-[130px_1fr] w-160 h-150">
+        <div className="flex flex-col py-5 items-center bg-gradient-to-t from-zinc-400 via-zinc-300 to-zinc-400">
+          <div className="border-3 border-red-600 rounded-full w-27 h-6">
+            <p className="text-red-600 text-xl font-bold italic relative bottom-[4px] left-[9px]">
+              Nick Vila
+            </p>
+          </div>
+
+          <p className="text-[5.3rem] [writing-mode:vertical-rl] rotate-180 relative top-5 right-0 text-[#3669B5] font-extrabold italic">
             DEVELOPER
           </p>
         </div>
