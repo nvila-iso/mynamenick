@@ -9,3 +9,7 @@
 @theme {
   --font-inter: "Inter", sans-serif;
 }
+
+#mouthOpen {
+  display: none;
+}
