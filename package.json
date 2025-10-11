@@ -15,7 +15,8 @@
     "react-dom": "^19.1.1",
     "react-pageflip": "^2.0.3",
     "react-router": "^7.9.3",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.14",
+    "typeit-react": "^2.7.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

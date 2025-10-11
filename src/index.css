@@ -31,6 +31,24 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#company {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+.tiny {
+  font-size: 0.7rem;
+}
+
 .quiet #mouth {
   visibility: hidden;
 }

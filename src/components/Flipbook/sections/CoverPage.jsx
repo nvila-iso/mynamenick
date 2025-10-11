@@ -1,6 +1,8 @@
 import { forwardRef } from "react";
 
+
 const CoverPage = forwardRef((_, ref) => {
+
   return (
     <div
       ref={ref}

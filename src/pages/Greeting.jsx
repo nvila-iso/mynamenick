@@ -1,43 +1,70 @@
 import { useState } from "react";
-import Typewriter from "../hooks/useTypewriter";
+import { useNavigate } from "react-router";
+import TypeIt from "typeit-react"; // https://www.typeitjs.com/
 import Talking from "/src/assets/arms_crossed.svg?react";
-
-const context = [
-  "Hii! Thanks for coming to my page.",
-  "Before we move on, can you please enter your company name?",
-  "I promise I'm not storing this!",
-];
+import { useCompanyName } from "../context/CompanyContext";
 
 const Greeting = () => {
+  const { setCompanyName } = useCompanyName();
   const [startTalking, setStartTalking] = useState(false);
-  const [sentence, setSentence] = useState(context[0]);
+  const [showInput, setShowInput] = useState(false);
 
-  // const talking = () => {
-  //   if (startTalking === true) {
-  //     setStartTalking(false);
-  //   } else {
-  //     setStartTalking(true);
-  //   }
-  // };
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const fd = new FormData(e.currentTarget);
+    const name = fd.get("company");
+
+    setCompanyName(name);
+    navigate("homepage");
+  };
 
   return (
     <>
-      <div className="flex">
-        <div className="grid grid-rows-[1fr] speech-bubble p-1 relative bottom-23">
-          <Typewriter
-            text={sentence}
-            onTypingChange={(b) => setStartTalking(b)}
+      <div className="flex flex-col justify-center items-center">
+        <div className="w-90 h-24 text-center mb-3">
+          <TypeIt
+            options={{ speed: 30, lifeLife: true }}
+            getBeforeInit={(instance) => {
+              instance
+                .exec(async () => await setStartTalking(true))
+                .type("Hey there, I'm Ncik.")
+                .exec(async () => await setStartTalking(false))
+                .pause(650)
+                .delete(4)
+                .pause(500)
+                .exec(async () => await setStartTalking(true))
+                .type(
+                  `ick! Thanks for visiting. Before you head in, mind dropping your company name? <br /> <span class="tiny">I promise I'm not logging this...</span>`
+                )
+                .exec(async () => await setStartTalking(false))
+                .exec(async () => await setShowInput(true));
+
+              return instance;
+            }}
           />
-          <div className="flex justify-between px-2">
-            <button>prev</button>
-            <button>next</button>
-          </div>
         </div>
-        <Talking
-          className={`size-50 md:size-60 lg:size-80 ${
-            startTalking ? "talking" : "quiet"
-          }`}
-        />
+        <Talking className={`size-80 ${startTalking ? "talking" : "quiet"}`} />
+        <div className="w-60 h-12">
+          {!showInput ? (
+            <>
+              <button onClick={() => setShowInput(true)}>skip</button>
+            </>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <input
+                name="company"
+                id="company"
+                placeholder="Company Name"
+                className="transition-opacity delay-50000 w-60 h-12 px-2 border-3 border-black rounded-sm relative bottom-[3px]"
+                required
+              ></input>
+              <button>Send it!</button>
+            </form>
+          )}
+        </div>
       </div>
     </>
   );
