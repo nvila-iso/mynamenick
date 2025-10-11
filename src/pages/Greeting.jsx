@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import TypeIt from "typeit-react"; // https://www.typeitjs.com/
 import Talking from "/src/assets/arms_crossed.svg?react";
 import { useCompanyName } from "../context/CompanyContext";
+import { FaCaretRight } from "react-icons/fa";
 
 const Greeting = () => {
   const { setCompanyName } = useCompanyName();
@@ -56,12 +57,16 @@ const Greeting = () => {
             <form onSubmit={handleSubmit}>
               <input
                 name="company"
-                id="company"
                 placeholder="Company Name"
-                className="transition-opacity delay-50000 w-60 h-12 px-2 border-3 border-black rounded-sm relative bottom-[3px]"
+                className="company transition-opacity delay-50000 w-60 h-12 px-2 border-3 border-black rounded-sm relative bottom-[3px]"
                 required
               ></input>
-              <button>Send it!</button>
+              <div className="company flex justify-center items-center ">
+                <button className="flex justify-center items-center cursor-pointer">
+                  <FaCaretRight id="start" className="size-5 cursor-pointer" />
+                  Send it!
+                </button>
+              </div>
             </form>
           )}
         </div>
