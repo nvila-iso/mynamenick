@@ -1,8 +1,6 @@
 import { forwardRef } from "react";
 
-
 const CoverPage = forwardRef((_, ref) => {
-
   return (
     <div
       ref={ref}
@@ -21,7 +19,11 @@ const CoverPage = forwardRef((_, ref) => {
           </p>
         </div>
         <div className="overflow-hidden">
-          <img src="src/assets/logo.webp" className="absolute size-50" />
+          <img
+            src="src/assets/logo.webp"
+            className="absolute size-50"
+            loading="lazy"
+          />
           <img src="src/assets/game_cover.webp" className="object-cover" />
           <p className="relative bottom-55 left-70 text-white italic text-2xl font-semibold">
             Resume Booklet

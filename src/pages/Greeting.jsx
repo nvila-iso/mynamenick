@@ -51,7 +51,9 @@ const Greeting = () => {
         <div className="w-60 h-12">
           {!showInput ? (
             <>
-              <button onClick={() => setShowInput(true)}>skip</button>
+              <div className="text-center">
+                <button onClick={() => setShowInput(true)} className="underline cursor-pointer">skip</button>
+              </div>
             </>
           ) : (
             <form onSubmit={handleSubmit}>
