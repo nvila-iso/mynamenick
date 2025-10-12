@@ -1,11 +1,13 @@
 import { forwardRef } from "react";
 import PageLayout from "../PageLayout";
+import { useCompanyName } from "../../../context/CompanyContext";
 
 const PageTwo = forwardRef((_, ref) => {
+  const { companyName } = useCompanyName();
   return (
     <PageLayout ref={ref} title="Quick Reference" pageNumber={2}>
       <p className="text-2xl font-bold text-center">PLAYER PROFILE</p>
-      <hr className="text-black/30"/>
+      <hr className="text-black/30" />
 
       <div className="mt-1 grid grid-cols-[120px_1fr] gap-1 px-1">
         <div className="bg-[#E8C077] rounded-sm border-2 border-black size-30 flex justify-center">
@@ -31,7 +33,7 @@ const PageTwo = forwardRef((_, ref) => {
           retail, food service, IT and recently development
         </p>
         <p>
-          <strong>Current Quest: </strong>Join Lost Ark Videogames
+          <strong>Current Quest: </strong>Join <strong>{companyName}</strong>
         </p>
       </div>
       <hr />

@@ -10,6 +10,64 @@
   --font-inter: "Inter", sans-serif;
 }
 
-#mouthOpen {
-  display: none;
+/* .talking #mouthClosed {
+  visibility: hidden;
+}
+.talking #mouthOpen {
+  visibility: visible;
+}
+
+ */
+
+@keyframes mouthFlip {
+  0% {
+    visibility: show;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: show;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  top {
+    opacity: 1;
+  }
+}
+
+#start {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.company {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+.tiny {
+  font-size: 0.7rem;
+}
+
+.quiet #mouth {
+  visibility: hidden;
+}
+
+.talking #mouth {
+  animation: mouthFlip 0.4s steps(1) infinite;
 }
