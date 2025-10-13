@@ -73,6 +73,6 @@
   #book-container {
     transform: scale(0.6);
     position: relative;
-    /* right: 145px; */
+    right: 145px;
   }
 }
