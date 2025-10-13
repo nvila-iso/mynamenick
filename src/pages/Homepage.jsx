@@ -1,9 +1,8 @@
 import Flipbook from "../components/Flipbook/Flipbook";
 
-
 const Homepage = () => {
   return (
-    <div>
+    <div id="book-container">
       <Flipbook />
     </div>
   );

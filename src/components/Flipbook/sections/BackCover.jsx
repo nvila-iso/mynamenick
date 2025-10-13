@@ -4,25 +4,30 @@ const BackCover = forwardRef((_, ref) => {
   return (
     <div
       ref={ref}
-      className="relative w-full h-full overflow-hidden rounded-l-md shadow-md "
+      className="relative w-full h-full overflow-hidden rounded-l-md shadow-md bg-[#F7DDB0]"
     >
-      <div className="grid grid-cols-[130px_1fr] w-160 h-150">
-        <div className="flex flex-col py-5 items-center bg-gradient-to-t from-zinc-400 via-zinc-300 to-zinc-400">
-          <p className="text-center text-red-600 text-lg font-semibold border-3 border-red-600 rounded-full w-25">
-            Nick Vila
-          </p>
-          <p className="text-7xl [writing-mode:vertical-rl] rotate-180 relative top-20 font-bold italic text-[#3669B5]">
-            DEVELOPER
-          </p>
-        </div>
-        <div className="overflow-hidden">
-          <img src="src/assets/logo.webp" className="absolute size-50" />
-          <img src="src/assets/game_cover.webp" className="object-cover" />
-          <p className="relative bottom-55 left-70 text-white italic text-2xl font-semibold">
-            Resume Booklet
-          </p>
-        </div>
+      <div className="bg-[#648076] h-24 flex justify-center items-center text-white text-center">
+        <p>
+          LOOKING TO HIRE SOMEONE CREATIVE, TECHNICAL AND RELIABLE? <br /> EMAIL
+          NVILA88@PROTON.ME
+        </p>
       </div>
+
+      <div className="flex flex-col justify-center items-center h-96 font-semibold gap-1">
+        <p>mynamenick.com</p>
+        <img src="src/assets/qrcode.svg" alt="" className="size-50" />
+        <p>Thanks!</p>
+      </div>
+
+      <div className="bg-[#648076] h-18 flex flex-col justify-center items-center text-white text-center w-full">
+        <p className="text-lg">
+          Nicolas C Vila <br />
+        </p>
+        <p>nvila88@proton.me &nbsp; linkedin/nvila88</p>
+      </div>
+      <p className="text-xs text-center mt-4">
+        © 2025 Nick Vila. All worlds imagined.
+      </p>
     </div>
   );
 });
