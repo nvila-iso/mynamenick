@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import PageLayout from "../PageLayout";
 import scribble from "../../../assets/scribble.svg";
-import questionMark from "../../../asset/question_mark.svg";
+import questionMark from "../../../assets/question_mark.svg";
 
 const PageThree = forwardRef((_, ref) => {
   return (
