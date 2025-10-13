@@ -1,6 +1,8 @@
 import { forwardRef } from "react";
 import PageLayout from "../PageLayout";
 import { useCompanyName } from "../../../context/CompanyContext";
+import playerProfile from "../../../assets/player_profile.png"
+import controller from "../../../assets/controller.svg"
 
 const PageTwo = forwardRef((_, ref) => {
   const { companyName } = useCompanyName();
@@ -11,7 +13,7 @@ const PageTwo = forwardRef((_, ref) => {
 
       <div className="mt-1 grid grid-cols-[120px_1fr] gap-1 px-1">
         <div className="bg-[#E8C077] rounded-sm border-2 border-black size-30 flex justify-center">
-          <img src="src\assets\player_profile.png" alt="nick" className="" />
+          <img src={playerProfile} alt="nick" className="" />
         </div>
         <div>
           <p>
@@ -41,8 +43,8 @@ const PageTwo = forwardRef((_, ref) => {
         <div className="flex flex-col justify-center items-center">
           <p className="text-2xl font-bold">CONTROLS</p>
           <img
-            src="src\assets\controller.svg"
-            alt="Possible a snes controller"
+            src={controller}
+            alt="Possibly a snes controller"
             className="size-40 relative bottom-10"
           />
         </div>

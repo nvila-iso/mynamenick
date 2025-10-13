@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import PageLayout from "../PageLayout";
+import running from "../../../assets/running.svg"
 
 const renderHR = (num) => {
   return Array.from({ length: num }, (_, i) => {
@@ -20,8 +21,8 @@ const PageSix = forwardRef((_, ref) => {
       </div>
 
       <img
-        src="src/assets/running.svg"
-        alt=""
+        src={running}
+        alt="Nick running"
         className="size-90 absolute left-37 bottom-20"
       />
     </PageLayout>

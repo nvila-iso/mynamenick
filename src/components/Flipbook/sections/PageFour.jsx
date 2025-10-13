@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import PageLayout from "../PageLayout";
+import treasure from "../../../assets/treasure.svg";
 
 const PageFour = forwardRef((_, ref) => {
   return (
@@ -43,7 +44,11 @@ const PageFour = forwardRef((_, ref) => {
           FGC.
         </p>
       </div>
-      <img src="src\assets\treasure.svg" alt="" className="size-110 absolute bottom-5 left-45"/>
+      <img
+        src={treasure}
+        alt="Nick opens a treasure chest"
+        className="size-110 absolute bottom-5 left-45"
+      />
     </PageLayout>
   );
 });

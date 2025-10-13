@@ -1,5 +1,7 @@
 import { forwardRef } from "react";
 import PageLayout from "../PageLayout";
+import scribble from "../../../assets/scribble.svg";
+import questionMark from "../../../asset/question_mark.svg";
 
 const PageThree = forwardRef((_, ref) => {
   return (
@@ -16,7 +18,7 @@ const PageThree = forwardRef((_, ref) => {
           reliability
         </p>
         <div className="grid grid-cols-[160px_1fr] items-center">
-          <img src="src\assets\scribble.svg" alt="" className="size-40" />
+          <img src={scribble} alt="" className="size-40" />
           <div className="flex flex-col gap-2">
             <p>
               <strong>Level 3: </strong>Restaurant Industry (5yrs): Service,
@@ -35,10 +37,16 @@ const PageThree = forwardRef((_, ref) => {
             management, problem-solving, project planning.
           </p>
           <p className="w-96">
-            <strong>Bonus Stage: </strong>FullStack Academy (3 months full-time): Certificate in Fullstack development, team coordination, logging / documentation.
+            <strong>Bonus Stage: </strong>FullStack Academy (3 months
+            full-time): Certificate in Fullstack development, team coordination,
+            logging / documentation.
           </p>
         </div>
-        <img src="src\assets\question_mark.svg" alt="" className="size-50 absolute right-5 bottom-5"/>
+        <img
+          src={questionMark}
+          alt=""
+          className="size-50 absolute right-5 bottom-5"
+        />
       </div>
     </PageLayout>
   );

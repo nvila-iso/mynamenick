@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import qrCode from '../../../assets/qrcode.svg'
 
 const BackCover = forwardRef((_, ref) => {
   return (
@@ -15,7 +16,7 @@ const BackCover = forwardRef((_, ref) => {
 
       <div className="flex flex-col justify-center items-center h-96 font-semibold gap-1">
         <p>mynamenick.com</p>
-        <img src="src/assets/qrcode.svg" alt="" className="size-50" />
+        <img src={qrCode} alt="qr code for website" className="size-50" />
         <p>Thanks!</p>
       </div>
 
