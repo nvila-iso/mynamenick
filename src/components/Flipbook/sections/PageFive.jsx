@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import PageLayout from "../PageLayout";
 import Talking from "/src/assets/arms_crossed.svg?react";
 import vhsStack from "../../../assets/vhs_stack.svg"
-import tvStack from "../../../asset/tv_stack.svg"
+import tvStack from "../../../assets/tv_stack.svg"
 
 
 const PageFive = forwardRef((_, ref) => {
