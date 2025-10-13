@@ -1,4 +1,6 @@
 import { forwardRef } from "react";
+import logo from "../../../assets/logo.webp";
+import gameCover from "../../../assets/game_cover.webp";
 
 const CoverPage = forwardRef((_, ref) => {
   return (
@@ -19,12 +21,8 @@ const CoverPage = forwardRef((_, ref) => {
           </p>
         </div>
         <div className="overflow-hidden">
-          <img
-            src="src/assets/logo.webp"
-            className="absolute size-50"
-            loading="lazy"
-          />
-          <img src="src/assets/game_cover.webp" className="object-cover" />
+          <img src={logo} className="absolute size-50" loading="lazy" />
+          <img src={gameCover} className="object-cover" />
           <p className="relative bottom-55 left-70 text-white italic text-2xl font-semibold">
             Resume Booklet
           </p>
