@@ -3,6 +3,7 @@ import RootLayout from "./layouts/RootLayout";
 
 import Homepage from "./pages/Homepage";
 import Greeting from "./pages/Greeting";
+import HandheldView from "./pages/HandheldView";
 
 const routes = [
   {
@@ -11,6 +12,7 @@ const routes = [
     children: [
       { index: true, Component: Greeting },
       { path: "homepage", Component: Homepage },
+      { path: "handheld", Component: HandheldView },
     ],
   },
 ];

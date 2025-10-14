@@ -32,7 +32,7 @@ const Flipbook = () => {
         flippingTime={900}
         maxShadowOpacity={0.1}
         mobileScrollSupport
-        className=""
+        className=""npm
       >
         <CoverPage />
         <PageOne />
