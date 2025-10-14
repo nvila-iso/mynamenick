@@ -2,13 +2,18 @@ import { forwardRef } from "react";
 import PageLayout from "../PageLayout";
 import { useCompanyName } from "../../../context/CompanyContext";
 import seal from "../../../assets/seal.svg";
+import { coverLettersJSX } from "../../content/coverLetters.jsx";
 
 const PageOne = forwardRef((_, ref) => {
   const { companyName } = useCompanyName();
+
   return (
     <PageLayout ref={ref} title="Cover Letter" pageNumber={1}>
       <div className="flex flex-col gap-2 text-sm p-1">
-        <p>Hiring Manager / Fellow Gamer,</p>
+        {!companyName
+          ? coverLettersJSX.generic()
+          : coverLettersJSX.companyName(companyName)}
+        {/* <p>Hiring Manager / Fellow Gamer,</p>
         <p>
           I am excited to apply for a position at <strong>{companyName}</strong>
           . With a background in web development, design, video editing, and
@@ -40,8 +45,8 @@ const PageOne = forwardRef((_, ref) => {
         </p>
 
         <p className="text-base">
-          Sincerly, <br /> Nick Vila
-        </p>
+          Sincerely, <br /> Nick Vila
+        </p> */}
       </div>
       <img
         src={seal}

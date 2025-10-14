@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, Link } from "react-router";
 import TypeIt from "typeit-react"; // https://www.typeitjs.com/
 import Talking from "/src/assets/arms_crossed.svg?react";
 import { useCompanyName } from "../context/CompanyContext";
 import { FaCaretRight } from "react-icons/fa";
+
 
 const Greeting = () => {
   const { setCompanyName } = useCompanyName();
@@ -21,6 +22,8 @@ const Greeting = () => {
     setCompanyName(name);
     navigate("homepage");
   };
+
+
 
   return (
     <>
@@ -52,7 +55,12 @@ const Greeting = () => {
           {!showInput ? (
             <>
               <div className="text-center">
-                <button onClick={() => setShowInput(true)} className="underline cursor-pointer">skip</button>
+                <button
+                  onClick={() => setShowInput(true)}
+                  className="underline cursor-pointer"
+                >
+                  skip text
+                </button>
               </div>
             </>
           ) : (
@@ -63,11 +71,16 @@ const Greeting = () => {
                 className="company transition-opacity delay-50000 w-60 h-12 px-2 border-3 border-black rounded-sm relative bottom-[3px]"
                 required
               ></input>
-              <div className="company flex justify-center items-center ">
+              <div className="company flex flex-col justify-center items-center ">
                 <button className="flex justify-center items-center cursor-pointer">
                   <FaCaretRight id="start" className="size-5 cursor-pointer" />
                   Send it!
                 </button>
+                <Link to="/homepage">
+                  <button className="flex justify-center items-center cursor-pointer underline">
+                    I'd rather not
+                  </button>
+                </Link>
               </div>
             </form>
           )}
