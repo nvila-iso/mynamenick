@@ -14,7 +14,7 @@ const HandheldView = () => {
         <div className="mt-5 bg-[#968CC0] w-full min-h-screen flex flex-col items-center">
           <div
             id="screen-frame"
-            className="mt-3 bg-black w-[90%] h-100 flex justify-center items-center rounded-t-sm border-l-2 border-t-2 border-r-2 border-[#6F59C8] border-double"
+            className="mt-3 bg-radial-[at_75%_25%] from-zinc-400 to-black to-35% w-[90%] h-100 flex justify-center items-center rounded-t-sm border-l-2 border-t-2 border-r-2 border-[#6F59C8] border-double"
           >
             <div
               id="screen"
