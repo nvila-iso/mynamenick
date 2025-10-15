@@ -4,6 +4,7 @@ import RootLayout from "./layouts/RootLayout";
 import Homepage from "./pages/Homepage";
 import Greeting from "./pages/Greeting";
 import HandheldView from "./pages/HandheldView";
+import ScreenOne from "./components/Handheld/ScreenOne";
 
 const routes = [
   {
@@ -13,6 +14,7 @@ const routes = [
       { index: true, Component: Greeting },
       { path: "homepage", Component: Homepage },
       { path: "handheld", Component: HandheldView },
+      { path: "screenone", Component: ScreenOne },
     ],
   },
 ];

@@ -35,7 +35,7 @@ const PageTwo = forwardRef((_, ref) => {
           retail, food service, IT and recently development
         </p>
         <p>
-          <strong>Current Quest: </strong>Join <strong>{companyName}</strong>
+          <strong>Current Quest: </strong>Join {companyName ? <strong>{companyName}</strong> : "your company!"}
         </p>
       </div>
       <hr />
