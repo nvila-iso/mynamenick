@@ -28,6 +28,32 @@ const HandheldView = () => {
           <div className="bg-black w-[90%] h-10 rounded-b-full border-l-2 border-b-2 border-r-2 border-[#6F59C8] border-double">
             <p className="text-white text-center ">my name nick</p>
           </div>
+          <div
+            id="controls"
+            className="w-[85%] mt-5 flex justify-between items-center"
+          >
+            <div id="d-pad" className="w-28 h-28 bg-black rounded-full">
+              <div id="left" className=""></div>
+            </div>
+            <div id="start-select" className="flex gap-2">
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-3 bg-black rounded-full"></div>
+                <p>start</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-3 bg-black rounded-full"></div>
+                <p>select</p>
+              </div>
+            </div>
+            <div id="buttons" className="flex">
+              <p className="flex justify-center items-center w-15 h-15 bg-radial-[at_75%_25%] from-zinc-500 to-zinc-900 to-45% text-zinc-200 text-lg rounded-full text-center">
+                B
+              </p>
+              <p className="flex justify-center items-center w-15 h-15 bg-radial-[at_75%_25%] from-zinc-500 to-zinc-900 to-45% text-zinc-200 text-lg text-white rounded-full text-center relative bottom-8">
+                A
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>
