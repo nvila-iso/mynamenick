@@ -6,10 +6,22 @@ import ScreenOne from "../components/Handheld/ScreenOne";
 import ScreenTwo from "../components/Handheld/ScreenTwo";
 import ScreenThree from "../components/Handheld/ScreenThree";
 import ScreenFour from "../components/Handheld/ScreenFour";
+import ExtraContentScreen from "../components/Handheld/ExtraContentScreen";
+import AboutDev from "../components/Handheld/AboutDev";
+import Credits from "../components/Handheld/Credits";
 
 const HandheldView = () => {
   const screens = useMemo(
-    () => [OpeningScreen, ScreenOne, ScreenTwo, ScreenThree, ScreenFour],
+    () => [
+      OpeningScreen,
+      ScreenOne,
+      ScreenTwo,
+      ScreenThree,
+      ScreenFour,
+      ExtraContentScreen,
+      AboutDev,
+      Credits,
+    ],
     []
   );
   const [screenIdx, setScreenIdx] = useState(0);
