@@ -1,9 +1,10 @@
 import question from "../../assets/question_mark.svg";
 
-const ScreenFour = () => {
+const Experience = () => {
   return (
     <>
       <div className="h-90 p-1 ">
+
         <p className="text-center text-lg">EXPERIENCE LEVELS</p>
         <div className="border-2 border-zinc-500 p-1 rounded-md text-sm h-[92%] flex flex-col gap-2 overflow-auto scroll-smooth">
           <div className="flex items-center gap-2">
@@ -67,4 +68,4 @@ const ScreenFour = () => {
   );
 };
 
-export default ScreenFour;
+export default Experience;

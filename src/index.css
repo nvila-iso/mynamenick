@@ -83,10 +83,11 @@
 }
 
 /* Idle state mirrors your mouth logic */
-.quiet #middle-hand,
-.quiet #left-hand,
-.quiet #right-hand {
-  animation: none;
+/* .still #middle-hand, */
+.still #left-hand,
+.still #right-hand {
+  /* animation: none; */
+  visibility: hidden;
 }
 
 /* Play all three tracks in parallel when waving */

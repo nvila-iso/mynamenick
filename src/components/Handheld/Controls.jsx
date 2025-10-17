@@ -1,9 +1,10 @@
 import handheld from "../../assets/handheld.svg";
 
-const ScreenThree = () => {
+const Controls = () => {
   return (
     <>
       <div className="h-90 p-1">
+
         <p className="text-center text-lg">CONTROLS</p>
         <div className="border-2 border-zinc-500 p-1 rounded-md h-[92%]">
           <form className="flex flex-col gap-5">
@@ -15,7 +16,9 @@ const ScreenThree = () => {
             </fieldset>
             <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
               <legend className="font-semibold">Technical Skills</legend>
-              <p className="px-1">Windows + Linux OS, Computer Hardware, Networking</p>
+              <p className="px-1">
+                Windows + Linux OS, Computer Hardware, Networking
+              </p>
             </fieldset>
 
             <fieldset className="border-1 border-zinc-500 text-sm rounded-sm w-50">
@@ -42,6 +45,4 @@ const ScreenThree = () => {
   );
 };
 
-export default ScreenThree;
-
-//            <img src={handheld} alt="" className="h-20 mx-auto" />
+export default Controls;

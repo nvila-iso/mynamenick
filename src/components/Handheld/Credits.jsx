@@ -4,13 +4,14 @@ import TypeIt from "typeit-react";
 
 const Credits = () => {
   const [startTalking, setStartTalking] = useState(false);
+  const [startWaving, setStartWaving] = useState(false);
   return (
     <>
-      <div className="h-90 p-1">
+      <div className="h-90 p-1 flex flex-col justify-center items-center">
         <p className="text-center text-lg">THANK YOU FOR PLAYING!</p>
         <div id="character">
           <Waving
-            className={`waving size-40`}
+            className={`${startWaving ? "waving" : "still"} h-42 ${startTalking ? "talking" : "quiet"} relative right-5 top-8`}
           />
         </div>
         <div id="dialogue">
@@ -22,11 +23,13 @@ const Credits = () => {
               options={{ speed: 5, lifeLife: true, cursor: false }}
               getBeforeInit={(instance) => {
                 instance
+                  .exec(async () => await setStartWaving(false))
                   .exec(async () => await setStartTalking(true))
                   .type(
                     `Your curiosity and creativity keep the pixels glowing. Game on and don't forget to save your progress.`
                   )
-                  .exec(async () => await setStartTalking(false));
+                  .exec(async () => await setStartTalking(false))
+                  .exec(async () => await setStartWaving(true));
 
                 return instance;
               }}

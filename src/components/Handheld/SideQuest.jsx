@@ -4,7 +4,7 @@ import ECT from "./ExtraContent/ECT";
 import ContentOptions from "./ExtraContent/ContentOptions";
 import { useState } from "react";
 
-const ExtraContentScreen = () => {
+const SideQuest = () => {
   const [activeQuest, setActiveQuest] = useState("ContentOptions");
 
   return (
@@ -24,4 +24,4 @@ const ExtraContentScreen = () => {
   );
 };
 
-export default ExtraContentScreen;
+export default SideQuest;

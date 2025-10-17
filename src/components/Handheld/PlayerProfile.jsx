@@ -1,17 +1,18 @@
 import { useCompanyName } from "../../context/CompanyContext";
 import playerProfile from "../../assets/player_profile.png";
 
-const ScreenTwo = () => {
+const PlayerProfile = () => {
   const { companyName } = useCompanyName();
   return (
     <>
       <div className="h-90 p-1">
+
         {/*Player Profile*/}
         <p className="text-center text-lg">PLAYER PROFILE</p>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2 border-2 border-zinc-500 h-[92%] p-1 rounded-md">
           <div className="flex justify-content gap-2 border-2 border-zinc-500 p-1 rounded-md">
-            <div className="rounded-sm border-2 border-zinc-500 flex justify-center">
-              <img src={playerProfile} alt="" className="size-20" />
+            <div className="rounded-sm border-2 border-zinc-500 flex justify-center h-25 w-28">
+              <img src={playerProfile} alt="" className="contain-fit" />
             </div>
             <div>
               <p>
@@ -75,4 +76,4 @@ const ScreenTwo = () => {
   );
 };
 
-export default ScreenTwo;
+export default PlayerProfile;
