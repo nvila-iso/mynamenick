@@ -4,7 +4,7 @@ import TypeIt from "typeit-react"; // https://www.typeitjs.com/
 import Talking from "/src/assets/arms_crossed.svg?react";
 import { useCompanyName } from "../context/CompanyContext";
 import { FaCaretRight } from "react-icons/fa";
-
+import Flipbook from "../components/Flipbook/Flipbook.jsx";
 
 const Greeting = () => {
   const { setCompanyName } = useCompanyName();
@@ -20,10 +20,8 @@ const Greeting = () => {
     const name = fd.get("company");
 
     setCompanyName(name);
-    navigate("homepage");
+    navigate("/flipbook");
   };
-
-
 
   return (
     <>
@@ -76,7 +74,7 @@ const Greeting = () => {
                   <FaCaretRight id="start" className="size-5 cursor-pointer" />
                   Send it!
                 </button>
-                <Link to="/homepage">
+                <Link to="/flipbook">
                   <button className="flex justify-center items-center cursor-pointer underline">
                     I'd rather not
                   </button>

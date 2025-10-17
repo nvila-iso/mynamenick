@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 import RootLayout from "./layouts/RootLayout";
 
 import Homepage from "./pages/Homepage";
-import Greeting from "./pages/Greeting";
+import Flipbook from "./components/Flipbook/Flipbook";
 import HandheldView from "./pages/HandheldView";
 
 const routes = [
@@ -13,6 +13,7 @@ const routes = [
       { index: true, Component: Homepage },
       { path: "homepage", Component: Homepage },
       { path: "handheld", Component: HandheldView },
+      { path: "flipbook", Component: Flipbook },
     ],
   },
 ];

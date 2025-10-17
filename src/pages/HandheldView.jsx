@@ -113,7 +113,7 @@ const HandheldView = () => {
                 <FaCaretDown className="h-6 text-black/30 active:text-black" />
               </div>
             </div>
-            <div id="start-select" className="flex gap-2">
+            <div id="start-select" className="flex gap-2 relative top-25">
               <button>
                 <div className="flex flex-col items-center">
                   <div className="w-8 h-3 bg-radial-[at_95%_25%] from-zinc-600 to-zinc-800 to-45% rounded-full text-center active:bg-none active:bg-zinc-700 active:inset-shadow-sm inset-shadow-zinc-900"></div>

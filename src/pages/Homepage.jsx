@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-import Flipbook from "../components/Flipbook/Flipbook";
 import HandheldView from "./HandheldView";
 import Greeting from "./Greeting";
 
