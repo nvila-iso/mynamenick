@@ -3,7 +3,7 @@ import treasure from "../../../assets/treasure.svg";
 const ContentOptions = ({ setActiveQuest }) => {
   return (
     <>
-      <div className=" flex flex-col justify-center items-center gap-3">
+      <div className="flex flex-col justify-center items-center gap-3 h-[92%]">
         <img src={treasure} alt="" className="h-45" loading="lazy" />
         <div className="flex justify-center items-center gap-5 cursor-pointer">
           <div className="h-17 w-17 border-2 border-black/30 rounded-sm flex justify-center items-center">
