@@ -9,11 +9,13 @@ const Credits = () => {
     <>
       <div className="h-90 p-1 flex flex-col justify-center items-center">
         <p className="text-center text-lg">THANK YOU FOR PLAYING!</p>
-        <div id="character">
-          <Waving
-            className={`${startWaving ? "waving" : "still"} h-42 ${startTalking ? "talking" : "quiet"} relative right-5 top-8`}
-          />
-        </div>
+
+        <Waving
+          className={`${startWaving ? "waving" : "still"} h-42 w-42 ${
+            startTalking ? "talking" : "quiet"
+          } relative right-5 top-8`}
+        />
+
         <div id="dialogue">
           <div className="border border-zinc-500 rounded-xs w-12 text-center mb-1">
             <p>Nick</p>
