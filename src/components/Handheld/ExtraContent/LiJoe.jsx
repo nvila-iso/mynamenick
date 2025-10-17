@@ -1,4 +1,4 @@
-
+import { FaCaretLeft } from "react-icons/fa";
 
 const LiJoe = ({ setActiveQuest }) => {
   return (
@@ -14,7 +14,9 @@ const LiJoe = ({ setActiveQuest }) => {
           Side Quest
         </p>
       </div>
-      <p className="text-center font-semibold mt-3 mb-3 border-1 border-zinc-500 rounded-xs p-1 ">LiJoe's Youtube & Twitch Channel (1 year)</p>
+      <p className="text-center font-semibold mt-3 mb-3 border-1 border-zinc-500 rounded-xs p-1 ">
+        LiJoe's Youtube & Twitch Channel (1 year)
+      </p>
       <p>
         Collaborated with LIJoe to manage and grow his online presence by
         editing Twitch VODs for Youtube, designing channel logos, video packages
