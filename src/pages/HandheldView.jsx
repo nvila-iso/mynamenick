@@ -62,15 +62,15 @@ const HandheldView = () => {
 
   return (
     <>
-      <div className="mt-2 w-screen min-h-screen">
-        <div className="flex flex-col justify-center items-center">
+      <div className="w-screen h-screen">
+        {/* <div className="flex flex-col justify-center items-center">
           <p className="bg-white rounded-full py-1 px-2 mb-2 shadow-sm">
             Currently playing
           </p>
           <img src={cover} alt="" className="w-50 shadow-md" loading="lazy" />
-        </div>
+        </div> */}
         {/* Handheld  */}
-        <div className="mt-5 bg-[#968CC0] max-w-[393px] min-h-screen flex flex-col items-center mx-auto">
+        <div className="bg-[#968CC0] max-w-full min-h-screen flex flex-col items-center mx-auto">
           <div
             id="screen-frame"
             className="mt-3 bg-radial-[at_75%_25%] from-zinc-400 to-black to-35% w-[90%] h-100 flex justify-center items-center rounded-t-sm border-l-2 border-t-2 border-r-2 border-[#6F59C8] border-double"
