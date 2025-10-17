@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Flipbook from "../components/Flipbook/Flipbook";
 import HandheldView from "./HandheldView";
+import Greeting from "./Greeting";
 
 const Homepage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
@@ -20,7 +21,7 @@ const Homepage = () => {
     };
   }, []);
 
-  return isMobile ? <HandheldView /> : <Flipbook />;
+  return isMobile ? <HandheldView /> : <Greeting />;
 };
 
 export default Homepage;

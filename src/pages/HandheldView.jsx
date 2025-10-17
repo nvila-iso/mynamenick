@@ -69,7 +69,8 @@ const HandheldView = () => {
           </p>
           <img src={cover} alt="" className="w-50 shadow-md" loading="lazy" />
         </div>
-        <div className="mt-5 bg-[#968CC0] w-full min-h-screen flex flex-col items-center">
+        {/* Handheld  */}
+        <div className="mt-5 bg-[#968CC0] max-w-[393px] min-h-screen flex flex-col items-center mx-auto">
           <div
             id="screen-frame"
             className="mt-3 bg-radial-[at_75%_25%] from-zinc-400 to-black to-35% w-[90%] h-100 flex justify-center items-center rounded-t-sm border-l-2 border-t-2 border-r-2 border-[#6F59C8] border-double"
@@ -106,7 +107,7 @@ const HandheldView = () => {
                 <FaCaretRight className="h-6 text-black/30 active:text-black" />
               </div>
               {/* Up and Down */}
-              <div className="bg-radial-[at_95%_10%] from-zinc-600 to-zinc-800 to-20% w-8 h-25 mx-auto rounded-md flex flex-col justify-between items-center p-2 absolute left-17 shadow-sm">
+              <div className="bg-radial-[at_95%_10%] from-zinc-600 to-zinc-800 to-20% w-8 h-25 mx-auto rounded-md flex flex-col justify-between items-center p-2 absolute left-356shadow-sm">
                 <FaCaretUp className="h-6 text-black/30 active:text-black" />
                 <div className="w-3 h-3 rounded-full bg-radial-[at_45%_35%] from-zinc-800 to-zinc-900"></div>
                 <FaCaretDown className="h-6 text-black/30 active:text-black" />

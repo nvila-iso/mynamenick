@@ -96,7 +96,15 @@
 .waving #right-hand  { animation: showRight  1s steps(1) infinite; }
 
 
-@media (width <= 40rem) {
+
+@media screen and (min-width: 450px) and (max-width: 649px) {
+  #mobile-question {
+    bottom: 40%;
+    left: 41.5%;
+  }
+}
+
+/* @media (width <= 40rem) {
   #book-container {
     transform: scale(0.9);
   }
@@ -108,4 +116,4 @@
     position: relative;
     right: 122px;
   }
-}
+} */

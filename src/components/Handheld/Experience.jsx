@@ -4,7 +4,6 @@ const Experience = () => {
   return (
     <>
       <div className="h-90 p-1 ">
-
         <p className="text-center text-lg">EXPERIENCE LEVELS</p>
         <div className="border-2 border-zinc-500 p-1 rounded-md text-sm h-[92%] flex flex-col gap-2 overflow-auto scroll-smooth">
           <div className="flex items-center gap-2">
@@ -57,12 +56,13 @@ const Experience = () => {
             </p>
           </div>
           <p>Certificate in Full-Stack Development</p>
+          <img
+            src={question}
+            id="mobile-question"
+            alt="Nick holding a question mark or new quest"
+            className="absolute h-50 bottom-54 left-37 opacity-20"
+          />
         </div>
-        <img
-          src={question}
-          alt=""
-          className="absolute h-50 bottom-58 left-42 opacity-20"
-        />
       </div>
     </>
   );

@@ -10,7 +10,7 @@ const routes = [
     path: "/",
     Component: RootLayout,
     children: [
-      { index: true, Component: Greeting },
+      { index: true, Component: Homepage },
       { path: "homepage", Component: Homepage },
       { path: "handheld", Component: HandheldView },
     ],
