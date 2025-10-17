@@ -20,7 +20,7 @@ const Controls = () => {
               </p>
             </fieldset>
           </form>
-          <div className="grid grid-cols-2 mt-1">
+          <div className="grid grid-cols-[1fr_100px] mt-1">
             <div>
               <form className="flex flex-col gap-3">
                 <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
