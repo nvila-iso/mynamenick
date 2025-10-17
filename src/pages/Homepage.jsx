@@ -1,14 +1,26 @@
-import Flipbook from "../components/Flipbook/Flipbook";
+import { useState, useEffect } from "react";
+
+import HandheldView from "./HandheldView";
+import Greeting from "./Greeting";
 
 const Homepage = () => {
-  return (
-    <div id="book-container" className="flex flex-col gap-3">
-      <Flipbook />
-      <div className="flex justify-center">
-        {/* <img src="/LinkedIn_icon.webp" alt="" /> */}
-      </div>
-    </div>
-  );
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 650);
+    };
+
+    // Listener
+    window.addEventListener("resize", handleResize);
+
+    // Remove listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return isMobile ? <HandheldView /> : <Greeting />;
 };
 
 export default Homepage;

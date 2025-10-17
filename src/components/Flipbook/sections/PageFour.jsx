@@ -47,7 +47,7 @@ const PageFour = forwardRef((_, ref) => {
       <img
         src={treasure}
         alt="Nick opens a treasure chest"
-        className="size-110 absolute bottom-5 left-45"
+        className="size-110 absolute bottom-5 left-45 opacity-20"
       />
     </PageLayout>
   );

@@ -13,40 +13,6 @@ const PageOne = forwardRef((_, ref) => {
         {!companyName
           ? coverLettersJSX.generic()
           : coverLettersJSX.companyName(companyName)}
-        {/* <p>Hiring Manager / Fellow Gamer,</p>
-        <p>
-          I am excited to apply for a position at <strong>{companyName}</strong>
-          . With a background in web development, design, video editing, and
-          tournament organizing, along with years of customer service
-          experience, I bring both technical skill and a lifelong passion for
-          retro games and media. I’m eager to contribute wherever needed — from
-          assisting customers to supporting the arcade and maintaining the
-          store.
-        </p>
-        <p>
-          I recently graduated from FullStack Academy with a Full-Stack
-          Development certificate, where I learned to take projects from concept
-          to completion through design, clean code, and teamwork. Previously, I
-          built a track record of reliability at EB Games, Journey’s Sneakers,
-          the restaurant industry, and over a decade in IT (including
-          management). These roles sharpened my adaptability, communication, and
-          problem-solving skills.
-        </p>
-        <p>
-          Pursuing a role at <strong>{companyName}</strong> feels like the
-          perfect opportunity to combine my professional experience with my love
-          of retro culture. Beyond my career, I’ve built a collection of 500+
-          VHS tapes and remain deeply engaged with gaming history — appreciation
-          I’d bring to every customer interaction.
-        </p>
-        <p>
-          Thank you for your time and consideration. I look forward to the
-          chance to contribute.
-        </p>
-
-        <p className="text-base">
-          Sincerely, <br /> Nick Vila
-        </p> */}
       </div>
       <img
         src={seal}

@@ -63,7 +63,48 @@
   animation: mouthFlip 0.4s steps(1) infinite;
 }
 
-@media (width <= 40rem) {
+.resize-greeting {
+  transform: scale(.5);
+}
+
+
+/* Flipbook-style frames (no tweening) */
+@keyframes showMiddle {
+  0%, 40%, 100% { visibility: visible; }
+  20%, 60%      { visibility: hidden; }
+}
+@keyframes showLeft {
+  20%           { visibility: visible; }
+  0%, 40%, 60%, 100% { visibility: hidden; }
+}
+@keyframes showRight {
+  60%           { visibility: visible; }
+  0%, 20%, 40%, 100% { visibility: hidden; }
+}
+
+/* Idle state mirrors your mouth logic */
+/* .still #middle-hand, */
+.still #left-hand,
+.still #right-hand {
+  /* animation: none; */
+  visibility: hidden;
+}
+
+/* Play all three tracks in parallel when waving */
+.waving #middle-hand { animation: showMiddle 1s steps(1) infinite; }
+.waving #left-hand   { animation: showLeft   1s steps(1) infinite; }
+.waving #right-hand  { animation: showRight  1s steps(1) infinite; }
+
+
+
+@media screen and (min-width: 450px) and (max-width: 649px) {
+  #mobile-question {
+    bottom: 40%;
+    left: 41.5%;
+  }
+}
+
+/* @media (width <= 40rem) {
   #book-container {
     transform: scale(0.9);
   }
@@ -75,4 +116,4 @@
     position: relative;
     right: 122px;
   }
-}
+} */
