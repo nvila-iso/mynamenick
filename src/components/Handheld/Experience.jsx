@@ -58,9 +58,9 @@ const Experience = () => {
           <p>Certificate in Full-Stack Development</p>
           <img
             src={question}
-            id="mobile-question"
+            // id="mobile-question"
             alt="Nick holding a question mark or new quest"
-            className="absolute h-50 bottom-54 left-37 opacity-20"
+            className="absolute h-50 bottom-100 left-37 opacity-20"
           />
         </div>
       </div>
