@@ -20,7 +20,7 @@ const Controls = () => {
               </p>
             </fieldset>
           </form>
-          <div className="grid grid-cols-[1fr_80px] mt-1">
+          <div className="grid grid-cols-[1fr_60px] mt-1">
             <div>
               <form className="flex flex-col gap-1">
                 <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
@@ -38,7 +38,7 @@ const Controls = () => {
               </form>
             </div>
 
-            <img src={handheld} alt="" className="h-25 mx-auto opacity-60" />
+            <img src={handheld} alt="" className="h-20 mx-auto opacity-60" />
           </div>
         </div>
       </div>
