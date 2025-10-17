@@ -29,17 +29,18 @@ const Controls = () => {
                     Communication, Leadership, Teamwork, Problem Solving
                   </p>
                 </fieldset>
-                <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
-                  <legend className="font-semibold">Other Tools</legend>
-                  <p className="px-1">
-                    Adobe Suite, OBS Studio, Figma, Twitch & Youtube
-                  </p>
-                </fieldset>
               </form>
             </div>
-
             <img src={handheld} alt="" className="h-20 mx-auto opacity-60" />
           </div>
+          <form>
+            <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
+              <legend className="font-semibold">Other Tools</legend>
+              <p className="px-1">
+                Adobe Suite, OBS Studio, Figma, Twitch & Youtube
+              </p>
+            </fieldset>
+          </form>
         </div>
       </div>
     </>
