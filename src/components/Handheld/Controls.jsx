@@ -23,7 +23,7 @@ const Controls = () => {
           </form>
           <div
             className="grid grid-cols-[minmax(100px,_1fr)_minmax(30px,_60px)]
- mt-4 gap-1 items-center"
+ mt-3 gap-1"
           >
             <div>
               <form className="flex flex-col">
