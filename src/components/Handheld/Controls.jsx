@@ -22,7 +22,7 @@ const Controls = () => {
             </fieldset>
           </form>
           <div
-            className="grid grid-cols-[minmax(100px,_1fr)_minmax(80px,_100px)]
+            className="grid grid-cols-[minmax(100px,_1fr)_minmax(60px,_100px)]
  mt-4 gap-1 items-center"
           >
             <div>
