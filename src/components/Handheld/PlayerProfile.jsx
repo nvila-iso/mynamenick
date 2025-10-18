@@ -1,20 +1,21 @@
 import { useCompanyName } from "../../context/CompanyContext";
 import playerProfile from "../../assets/player_profile.png";
+import ScreenTemplate from "./ScreenTemplate";
 
 const PlayerProfile = () => {
   const { companyName } = useCompanyName();
   return (
     <>
-      <div className="h-90 p-1">
-
+      <ScreenTemplate>
         {/*Player Profile*/}
         <p className="text-center text-lg">PLAYER PROFILE</p>
-        <div className="flex flex-col gap-2 border-2 border-zinc-500 h-[92%] p-1 rounded-md">
+
+        <div className="flex flex-col gap-2 border-2 border-zinc-500 p-1 rounded-md">
           <div className="flex justify-content gap-2 border-2 border-zinc-500 p-1 rounded-md">
-            <div className="rounded-sm border-2 border-zinc-500 flex justify-center h-25 w-28">
+            <div className="min-w-15 min-h-15 max-w-20 rounded-sm border-2 border-zinc-500 flex justify-center">
               <img src={playerProfile} alt="" className="contain-fit" />
             </div>
-            <div>
+            <div className="text-sm">
               <p>
                 <strong>Name: </strong>Nick Vila
               </p>
@@ -70,8 +71,10 @@ const PlayerProfile = () => {
               {companyName ? <strong>{companyName}</strong> : "your company!"}
             </p>
           </div>
+          
         </div>
-      </div>
+        
+      </ScreenTemplate>
     </>
   );
 };
