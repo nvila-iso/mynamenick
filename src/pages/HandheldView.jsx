@@ -7,7 +7,6 @@ import {
   FaCaretUp,
 } from "react-icons/fa";
 
-import cover from "../assets/Cover.svg";
 import OpeningScreen from "../components/Handheld/OpeningScreen";
 import CoverLetter from "../components/Handheld/CoverLetter";
 import PlayerProfile from "../components/Handheld/PlayerProfile";
@@ -36,9 +35,6 @@ const HandheldView = () => {
 
   const clamp = (num) => Math.max(0, Math.min(num, screens.length - 1)); // prevents going below 0
 
-  // const next = () => setScreenIdx((i) => clamp(i + 1)); // Button A
-  // const prev = () => setScreenIdx((i) => clamp(i - 1)); // Button B
-
   const Screen = screens[screenIdx];
   const isOpening = Screen === OpeningScreen;
 
@@ -60,15 +56,15 @@ const HandheldView = () => {
     }
   };
 
+  // Up & Down Controls
+  const scrollByAmount = (amount) => {
+    const el = document.getElementById("scroll-area");
+    if (el) el.scrollBy({ top: amount });
+  };
+
   return (
     <>
       <div className="w-screen h-screen">
-        {/* <div className="flex flex-col justify-center items-center">
-          <p className="bg-white rounded-full py-1 px-2 mb-2 shadow-sm">
-            Currently playing
-          </p>
-          <img src={cover} alt="" className="w-50 shadow-md" loading="lazy" />
-        </div> */}
         {/* Handheld  */}
         <div className="bg-[#968CC0] max-w-full min-h-screen flex flex-col items-center mx-auto">
           <div
@@ -77,7 +73,7 @@ const HandheldView = () => {
           >
             <div
               id="screen"
-              className="bg-[#c2c0bc] w-[90%] h-90 inset-shadow-sm inset-shadow-zinc-600 rounded-sm"
+              className="bg-[#c2c0bc] w-[90%] inset-shadow-sm inset-shadow-zinc-600 rounded-sm "
             >
               <div>
                 <Screen
@@ -103,14 +99,23 @@ const HandheldView = () => {
             >
               {/* Left and Right */}
               <div className="bg-zinc-800 to-45% h-8 w-[90%] mx-auto rounded-md flex justify-between items-center p-2 shadow-sm">
-                <FaCaretLeft className="h-6 text-black/30 active:text-black" />
-                <FaCaretRight className="h-6 text-black/30 active:text-black" />
+                <FaCaretLeft
+                  className="h-6 text-black/30 active:text-black"
+                  onClick={prev}
+                />
+                <FaCaretRight
+                  className="h-6 text-black/30 active:text-black"
+                  onClick={next}
+                />
               </div>
               {/* Up and Down */}
               <div className="bg-radial-[at_95%_10%] from-zinc-600 to-zinc-800 to-20% w-8 h-25 mx-auto rounded-md flex flex-col justify-between items-center p-2 absolute left-356shadow-sm">
-                <FaCaretUp className="h-6 text-black/30 active:text-black" />
+                <FaCaretUp
+                  className="h-6 text-black/30 active:text-black"
+                  onClick={() => scrollByAmount(-100)}
+                />
                 <div className="w-3 h-3 rounded-full bg-radial-[at_45%_35%] from-zinc-800 to-zinc-900"></div>
-                <FaCaretDown className="h-6 text-black/30 active:text-black" />
+                <FaCaretDown className="h-6 text-black/30 active:text-black" onClick={() => scrollByAmount(100)}/>
               </div>
             </div>
             <div id="start-select" className="flex gap-2 relative top-25">
