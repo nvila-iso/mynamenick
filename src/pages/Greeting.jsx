@@ -28,7 +28,7 @@ const Greeting = () => {
       <div className="flex flex-col justify-center items-center">
         <div className="w-90 h-24 text-center mb-3">
           <TypeIt
-            options={{ speed: 30, lifeLife: true }}
+            options={{ speed: 30, lifeLife: true, cursor: false}}
             getBeforeInit={(instance) => {
               instance
                 .exec(async () => await setStartTalking(true))

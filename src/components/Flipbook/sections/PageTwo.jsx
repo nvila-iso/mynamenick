@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 import PageLayout from "../PageLayout";
 import { useCompanyName } from "../../../context/CompanyContext";
-import playerProfile from "../../../assets/player_profile.png"
-import controller from "../../../assets/controller.svg"
+import playerProfile from "../../../assets/player_profile.png";
+import handheld from "../../../assets/handheld.svg";
 
 const PageTwo = forwardRef((_, ref) => {
   const { companyName } = useCompanyName();
@@ -13,7 +13,7 @@ const PageTwo = forwardRef((_, ref) => {
 
       <div className="mt-1 grid grid-cols-[120px_1fr] gap-1 px-1">
         <div className="bg-[#E8C077] rounded-sm border-2 border-black size-30 flex justify-center">
-          <img src={playerProfile} alt="nick" className="" />
+          <img src={playerProfile} alt="nick" />
         </div>
         <div>
           <p>
@@ -35,7 +35,8 @@ const PageTwo = forwardRef((_, ref) => {
           retail, food service, IT and recently development
         </p>
         <p>
-          <strong>Current Quest: </strong>Join {companyName ? <strong>{companyName}</strong> : "your company!"}
+          <strong>Current Quest: </strong>Join{" "}
+          {companyName ? <strong>{companyName}</strong> : "your company!"}
         </p>
       </div>
       <hr />
@@ -43,43 +44,51 @@ const PageTwo = forwardRef((_, ref) => {
         <div className="flex flex-col justify-center items-center">
           <p className="text-2xl font-bold">CONTROLS</p>
           <img
-            src={controller}
+            src={handheld}
             alt="Possibly a snes controller"
-            className="size-40 relative bottom-10"
+            className="h-40"
           />
         </div>
-        <div className="absolute bottom-35 left-12">
+        <div className="absolute bottom-40 left-12">
           <p className="font-semibold">Development</p>
           <ul className="text-sm list-disc relative left-6">
-            <li>Javascript</li>
             <li>React</li>
             <li>PostgreSQL</li>
             <li>Tailwind CSS</li>
+            <li>Git / Github</li>
+            <li>Javascript (Front & Backend)</li>
           </ul>
         </div>
-        <div className="absolute bottom-10 left-45">
+        <div className="absolute bottom-8 left-35">
           <p className="font-semibold">Other Tools</p>
           <ul className="text-sm list-disc relative left-6">
+            <li>Figma</li>
             <li>Adobe Suite</li>
             <li>OBS Studio</li>
-            <li>Figma</li>
-            <li>Twitch & Youtube</li>
+            <li>
+              Twitch & Youtube <br />
+              (Live Stream Tools)
+            </li>
           </ul>
         </div>
-        <div className="absolute bottom-10 right-50">
+        <div className="absolute bottom-10 right-35">
           <p className="font-semibold">Soft Skills</p>
           <ul className="text-sm list-disc relative left-6">
-            <li>Communication</li>
             <li>Teamwork</li>
             <li>Leadership</li>
+            <li>Communication</li>
             <li>Problem Solving</li>
           </ul>
         </div>
-        <div className="absolute bottom-45 left-110">
+        <div className="absolute bottom-38 left-100">
           <p className="font-semibold">Technical Skills</p>
           <ul className="text-sm list-disc relative left-6">
-            <li>Windows + Linux OS</li>
-            <li>Computer Hardware</li>
+            <li>
+              Windows + Linux OS <br />
+              Administration
+            </li>
+            <li>System Configuration & Troubleshooting</li>
+            <li>Network Setup & Diagnostics</li>
           </ul>
         </div>
       </div>
