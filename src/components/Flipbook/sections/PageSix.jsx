@@ -23,7 +23,7 @@ const PageSix = forwardRef((_, ref) => {
       <img
         src={running}
         alt="Nick running"
-        className="size-90 absolute left-37 bottom-20"
+        className="size-90 absolute left-37 bottom-20 opacity-20"
       />
     </PageLayout>
   );

@@ -4,6 +4,7 @@ import RootLayout from "./layouts/RootLayout";
 import Homepage from "./pages/Homepage";
 import Flipbook from "./components/Flipbook/Flipbook";
 import HandheldView from "./pages/HandheldView";
+import NotFound from "./pages/NotFound";
 
 const routes = [
   {
@@ -14,6 +15,7 @@ const routes = [
       { path: "homepage", Component: Homepage },
       { path: "handheld", Component: HandheldView },
       { path: "flipbook", Component: Flipbook },
+      { path: "*", Component: NotFound },
     ],
   },
 ];
