@@ -1,5 +1,4 @@
 import { useState, useMemo } from "react";
-import { Link } from "react-router";
 
 import {
   FaCaretLeft,
@@ -35,6 +34,7 @@ const HandheldView = () => {
   );
   const [screenIdx, setScreenIdx] = useState(0);
   const [companyDialogue, setCompanyDialogue] = useState(false); // prop for OpeningScreen
+
 
   const clamp = (num) => Math.max(0, Math.min(num, screens.length - 1)); // prevents going below 0
 
@@ -85,6 +85,7 @@ const HandheldView = () => {
                   setCompanyDialogue={setCompanyDialogue}
                   next={next}
                   prev={prev}
+            
                 />
               </div>
             </div>

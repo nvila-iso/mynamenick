@@ -23,7 +23,7 @@ const NEWOpeningScreen = ({ companyDialogue, setCompanyDialogue, next }) => {
     <>
       <ScreenTemplate>
         <div className="flex flex-col justify-center items-center gap-1">
-          <div id="title" className="text-center">
+          <div id="title" className="text-center mt-1">
             <p>Nick's Quest to Find a Job</p>
           </div>
           <div id="character">

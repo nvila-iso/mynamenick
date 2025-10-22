@@ -32,18 +32,22 @@
 }
 
 @keyframes blink {
-  from {
+  0% {
     opacity: 0;
   }
-  top {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 #start {
   animation-name: blink;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .company {
