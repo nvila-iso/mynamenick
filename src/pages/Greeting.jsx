@@ -4,7 +4,6 @@ import TypeIt from "typeit-react"; // https://www.typeitjs.com/
 import Talking from "/src/assets/arms_crossed.svg?react";
 import { useCompanyName } from "../context/CompanyContext";
 import { FaCaretRight } from "react-icons/fa";
-import Flipbook from "../components/Flipbook/Flipbook.jsx";
 
 const Greeting = () => {
   const { setCompanyName } = useCompanyName();

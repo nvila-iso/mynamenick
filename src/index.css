@@ -96,6 +96,11 @@
 .waving #right-hand  { animation: showRight  1s steps(1) infinite; }
 
 
+.head-shadow {
+  filter: drop-shadow(1px 2px 2px hsla(0, 0%, 0%, .25))
+}
+
+
 
 @media screen and (min-width: 450px) and (max-width: 649px) {
   #mobile-question {
@@ -104,16 +109,3 @@
   }
 }
 
-/* @media (width <= 40rem) {
-  #book-container {
-    transform: scale(0.9);
-  }
-}
-
-@media (width <= 450px) {
-  #book-container {
-    transform: scale(0.6);
-    position: relative;
-    right: 122px;
-  }
-} */

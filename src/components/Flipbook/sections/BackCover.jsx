@@ -15,6 +15,7 @@ const BackCover = forwardRef((_, ref) => {
       </div>
 
       <div className="flex flex-col justify-center items-center h-96 font-semibold gap-1">
+        <p>Check out my mobile view!</p>
         <p>mynamenick.com</p>
         <img src={qrCode} alt="qr code for website" className="size-50" />
         <p>Thanks!</p>

@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router";
 
 import {
   FaCaretLeft,
@@ -15,10 +16,12 @@ import Experience from "../components/Handheld/Experience";
 import SideQuest from "../components/Handheld/SideQuest";
 import AboutDev from "../components/Handheld/AboutDev";
 import Credits from "../components/Handheld/Credits";
+import Instructions from "../components/Handheld/Instructions";
 
 const HandheldView = () => {
   const screens = useMemo(
     () => [
+      Instructions,
       OpeningScreen,
       CoverLetter,
       PlayerProfile,
@@ -115,7 +118,10 @@ const HandheldView = () => {
                   onClick={() => scrollByAmount(-100)}
                 />
                 <div className="w-3 h-3 rounded-full bg-radial-[at_45%_35%] from-zinc-800 to-zinc-900"></div>
-                <FaCaretDown className="h-6 text-black/30 active:text-black" onClick={() => scrollByAmount(100)}/>
+                <FaCaretDown
+                  className="h-6 text-black/30 active:text-black"
+                  onClick={() => scrollByAmount(100)}
+                />
               </div>
             </div>
             <div id="start-select" className="flex gap-2 relative top-25">
@@ -126,9 +132,10 @@ const HandheldView = () => {
                 </div>
               </button>
 
-              <button>
+              <button onClick={() => setScreenIdx(1)}>
                 <div className="flex flex-col items-center">
                   <div className="w-8 h-3 bg-black bg-radial-[at_95%_25%] from-zinc-500 to-zinc-800 to-45% rounded-full active:bg-none active:bg-zinc-700 active:inset-shadow-sm inset-shadow-zinc-900"></div>
+
                   <p className="text-black/50 text-semibold">select</p>
                 </div>
               </button>
