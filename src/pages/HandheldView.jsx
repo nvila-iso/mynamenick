@@ -16,6 +16,7 @@ import SideQuest from "../components/Handheld/SideQuest";
 import AboutDev from "../components/Handheld/AboutDev";
 import Credits from "../components/Handheld/Credits";
 import Instructions from "../components/Handheld/Instructions";
+import StartMenu from "../components/Handheld/StartMenu";
 
 const HandheldView = () => {
   const screens = useMemo(
@@ -32,15 +33,26 @@ const HandheldView = () => {
     ],
     []
   );
+
+  // Handheld Colors
+  const colors = {
+    teal: "bg-[#008B8B]",
+    berry: "bg-[#B3013B]",
+    purple: "bg-[#a78cb7]",
+    dandelion: "bg-[#F2C300]",
+    kiwi: "bg-[#8DBA24]",
+    grape: "bg-[#6B57A7]",
+  };
+
   const [screenIdx, setScreenIdx] = useState(0);
   const [companyDialogue, setCompanyDialogue] = useState(false); // prop for OpeningScreen
+  const [showStart, setShowStart] = useState(false);
+  const [handheldColor, setHandheldColor] = useState(colors.grape);
 
-
-  const clamp = (num) => Math.max(0, Math.min(num, screens.length - 1)); // prevents going below 0
-
+  // Handles screen changing mechanics
   const Screen = screens[screenIdx];
   const isOpening = Screen === OpeningScreen;
-
+  const clamp = (num) => Math.max(0, Math.min(num, screens.length - 1)); // prevents going below 0
   const next = () => {
     if (isOpening && !companyDialogue) {
       setCompanyDialogue(true);
@@ -59,25 +71,44 @@ const HandheldView = () => {
     }
   };
 
+  // End of screen changing
+
   // Up & Down Controls
   const scrollByAmount = (amount) => {
     const el = document.getElementById("scroll-area");
     if (el) el.scrollBy({ top: amount });
   };
 
+  // Start Button Action
+  const handleStartButton = () => {
+    if (showStart === true) {
+      setShowStart(false);
+    } else {
+      setShowStart(true);
+    }
+  };
+
   return (
     <>
       <div className="w-screen h-screen">
         {/* Handheld  */}
-        <div className="bg-[#968CC0] max-w-full min-h-screen flex flex-col items-center mx-auto">
+        <div
+          className={`${handheldColor} max-w-full min-h-screen flex flex-col items-center mx-auto`}
+        >
           <div
             id="screen-frame"
-            className="mt-3 bg-radial-[at_75%_25%] from-zinc-400 to-black to-35% w-[90%] h-100 flex justify-center items-center rounded-t-sm border-l-2 border-t-2 border-r-2 border-[#6F59C8] border-double"
+            className="mt-3 bg-radial-[at_75%_25%] from-zinc-400 to-black to-35% w-[90%] h-100 flex justify-center items-center rounded-t-sm border-l-2 border-t-2 border-r-2 border-black/50 border-double"
           >
             <div
               id="screen"
               className="bg-[#c2c0bc] w-[90%] inset-shadow-sm inset-shadow-zinc-600 rounded-sm "
             >
+              {showStart && (
+                <StartMenu
+                  colors={colors}
+                  setHandheldColor={setHandheldColor}
+                />
+              )}
               <div>
                 <Screen
                   key={screenIdx}
@@ -85,13 +116,17 @@ const HandheldView = () => {
                   setCompanyDialogue={setCompanyDialogue}
                   next={next}
                   prev={prev}
-            
                 />
               </div>
             </div>
           </div>
-          <div className="bg-black w-[90%] h-10 rounded-b-full border-l-2 border-b-2 border-r-2 border-[#6F59C8] border-double">
-            <p className="text-white text-center ">my name nick</p>
+          <div className="bg-black w-[90%] h-10 rounded-b-full border-l-2 border-b-2 border-r-2 border-black/50 border-double">
+            <p className="text-white text-center">
+              my name{" "}
+              <strong>
+                <em>NICK</em>
+              </strong>
+            </p>
           </div>
           <div
             id="controls"
@@ -126,7 +161,7 @@ const HandheldView = () => {
               </div>
             </div>
             <div id="start-select" className="flex gap-2 relative top-25">
-              <button>
+              <button onClick={() => handleStartButton()}>
                 <div className="flex flex-col items-center">
                   <div className="w-8 h-3 bg-radial-[at_95%_25%] from-zinc-600 to-zinc-800 to-45% rounded-full text-center active:bg-none active:bg-zinc-700 active:inset-shadow-sm inset-shadow-zinc-900"></div>
                   <p className="text-black/50 text-semibold">start</p>

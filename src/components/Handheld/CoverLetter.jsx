@@ -7,7 +7,7 @@ const CoverLetter = () => {
   return (
     <>
       <ScreenTemplate>
-        <div className="flex flex-col gap-2 text-sm">
+        <div id="scroll-area" className="max-h-screen overflow-auto flex flex-col gap-2 text-sm">
           {!companyName
             ? coverLettersJSX.generic()
             : coverLettersJSX.companyName(companyName)}

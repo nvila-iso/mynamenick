@@ -1,4 +1,4 @@
-import handheld from "../../assets/handheld.svg";
+import running from "../../assets/running.svg";
 import ScreenTemplate from "./ScreenTemplate";
 
 const Controls = () => {
@@ -20,34 +20,25 @@ const Controls = () => {
                 Windows + Linux OS, Computer Hardware, Networking
               </p>
             </fieldset>
-          </form>
-          <div
-            className="grid grid-cols-[minmax(100px,_1fr)_minmax(30px,_60px)]
- mt-3 gap-1"
-          >
-            <div>
-              <form className="flex flex-col">
-                <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
-                  <legend className="font-semibold">Soft Skills</legend>
-                  <p className="px-1">
-                    Communication, Leadership, Teamwork, Problem Solving
-                  </p>
-                </fieldset>
-                <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
-                  <legend className="font-semibold">Other Tools</legend>
-                  <p className="px-1">
-                    Adobe Suite, OBS Studio, Figma, Twitch & Youtube
-                  </p>
-                </fieldset>
-              </form>
+            <div className="flex justify-center">
+              <img src={running} alt="" className="h-10 opacity-40" />
+              <img src={running} alt="" className="h-10 opacity-60" />
+              <img src={running} alt="" className="h-10" />
             </div>
-            <img
-              src={handheld}
-              alt=""
-              className="contain-fit mx-auto opacity-60"
-            />
-          </div>
-          <form></form>
+
+            <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
+              <legend className="font-semibold">Soft Skills</legend>
+              <p className="px-1">
+                Communication, Leadership, Teamwork, Problem Solving
+              </p>
+            </fieldset>
+            <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
+              <legend className="font-semibold">Other Tools</legend>
+              <p className="px-1">
+                Adobe Suite, OBS Studio, Figma, Twitch & Youtube
+              </p>
+            </fieldset>
+          </form>
         </div>
       </ScreenTemplate>
     </>
