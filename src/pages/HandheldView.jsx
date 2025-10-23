@@ -33,15 +33,26 @@ const HandheldView = () => {
     ],
     []
   );
+
+  // Handheld Colors
+  const colors = {
+    teal: "bg-[#008B8B]",
+    berry: "bg-[#B3013B]",
+    purple: "bg-[#a78cb7]",
+    dandelion: "bg-[#F2C300]",
+    kiwi: "bg-[#8DBA24]",
+    grape: "bg-[#6B57A7]",
+  };
+
   const [screenIdx, setScreenIdx] = useState(0);
   const [companyDialogue, setCompanyDialogue] = useState(false); // prop for OpeningScreen
   const [showStart, setShowStart] = useState(false);
+  const [handheldColor, setHandheldColor] = useState(colors.grape);
 
-  const clamp = (num) => Math.max(0, Math.min(num, screens.length - 1)); // prevents going below 0
-
+  // Handles screen changing mechanics
   const Screen = screens[screenIdx];
   const isOpening = Screen === OpeningScreen;
-
+  const clamp = (num) => Math.max(0, Math.min(num, screens.length - 1)); // prevents going below 0
   const next = () => {
     if (isOpening && !companyDialogue) {
       setCompanyDialogue(true);
@@ -59,6 +70,8 @@ const HandheldView = () => {
       setScreenIdx((i) => clamp(i - 1));
     }
   };
+
+  // End of screen changing
 
   // Up & Down Controls
   const scrollByAmount = (amount) => {
@@ -79,16 +92,23 @@ const HandheldView = () => {
     <>
       <div className="w-screen h-screen">
         {/* Handheld  */}
-        <div className="bg-[#968CC0] max-w-full min-h-screen flex flex-col items-center mx-auto">
+        <div
+          className={`${handheldColor} max-w-full min-h-screen flex flex-col items-center mx-auto`}
+        >
           <div
             id="screen-frame"
-            className="mt-3 bg-radial-[at_75%_25%] from-zinc-400 to-black to-35% w-[90%] h-100 flex justify-center items-center rounded-t-sm border-l-2 border-t-2 border-r-2 border-[#6F59C8] border-double"
+            className="mt-3 bg-radial-[at_75%_25%] from-zinc-400 to-black to-35% w-[90%] h-100 flex justify-center items-center rounded-t-sm border-l-2 border-t-2 border-r-2 border-black/50 border-double"
           >
             <div
               id="screen"
               className="bg-[#c2c0bc] w-[90%] inset-shadow-sm inset-shadow-zinc-600 rounded-sm "
             >
-              {showStart && <StartMenu />}
+              {showStart && (
+                <StartMenu
+                  colors={colors}
+                  setHandheldColor={setHandheldColor}
+                />
+              )}
               <div>
                 <Screen
                   key={screenIdx}
@@ -100,8 +120,13 @@ const HandheldView = () => {
               </div>
             </div>
           </div>
-          <div className="bg-black w-[90%] h-10 rounded-b-full border-l-2 border-b-2 border-r-2 border-[#6F59C8] border-double">
-            <p className="text-white text-center ">my name nick</p>
+          <div className="bg-black w-[90%] h-10 rounded-b-full border-l-2 border-b-2 border-r-2 border-black/50 border-double">
+            <p className="text-white text-center">
+              my name{" "}
+              <strong>
+                <em>NICK</em>
+              </strong>
+            </p>
           </div>
           <div
             id="controls"

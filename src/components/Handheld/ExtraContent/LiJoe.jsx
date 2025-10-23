@@ -1,7 +1,6 @@
 import { FaCaretLeft } from "react-icons/fa";
 
-const LiJoe = () => {
-
+const LiJoe = ({ setActiveQuest }) => {
   return (
     <>
       <div className="flex w-full gap-1 text-[#c2c0bc]">
