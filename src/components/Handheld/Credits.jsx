@@ -30,7 +30,13 @@ const Credits = () => {
                     .exec(async () => await setStartWaving(false))
                     .exec(async () => await setStartTalking(true))
                     .type(
-                      `Your curiosity and creativity keep the pixels glowing. Game on and don't forget to save your progress.`
+                      `Your curiosity and creativity keep the pixels glowing. Game on and don't forget to save your progress. `
+                    )
+                    .exec(async () => await setStartTalking(false))
+                    .pause(500)
+                    .exec(async () => await setStartTalking(true))
+                    .type(
+                      `<br /><span class="tiny">Also check out the <strong>Start Menu</strong> for contact info!</span>`
                     )
                     .exec(async () => await setStartTalking(false))
                     .exec(async () => await setStartWaving(true));
