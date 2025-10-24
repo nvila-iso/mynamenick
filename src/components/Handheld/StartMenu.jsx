@@ -4,11 +4,11 @@ import playerProfile from "../../assets/player_profile.png";
 
 const StartMenu = ({ colors, setHandheldColor }) => {
   const [selected, setSelected] = useState("contact");
-  console.log(colors);
+
 
   return (
     <>
-      <div className="bg-[#c2c0bc] absolute top-20 left-17 rounded-lg border-3 border-black/50 h-60 w-60 z-1">
+      <div className="bg-[#c2c0bc] absolute inset-x-[20%] inset-y-20 rounded-lg border-3 border-black/50 h-60 w-[60%] z-10">
         <div className="flex flex-col justify-center p-1">
           <p className="text-center">Tap to select</p>
           <hr className="w-[75%] mx-auto" />
@@ -44,13 +44,15 @@ const StartMenu = ({ colors, setHandheldColor }) => {
               <img
                 src="/linkedin.svg"
                 alt="linkedin logo"
-                className="mx-auto"
+                className="mx-auto opacity-80"
               />
               <Link
                 to="https://www.linkedin.com/in/nicolas-vila-970717366/"
                 target="_blank"
               >
-                <p>linkedin.com/in/nicolas-vila-970717366/</p>
+                <p className="cursor-pointer">
+                  linkedin.com/in/nicolas-vila-970717366/
+                </p>
               </Link>
             </div>
           )}
