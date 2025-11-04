@@ -40,6 +40,11 @@ https://mynamenick.com
 
 ---
 
+## To-Do:
+- Shading on the handheld
+- Better responsiveness for the manual
+- Button linking to other projects
+
 ## Contact
 
 email: nvila88@proton.me
