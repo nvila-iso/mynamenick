@@ -11,7 +11,7 @@ const ContentOptions = ({ setActiveQuest }) => {
               className="text-[#c2c0bc] font-semibold bg-zinc-600 h-15 w-15 flex justify-center items-center rounded-sm hover:bg-transparent hover:text-black hover:border hover:border-black/50 hover:transition-colors"
               onClick={() => setActiveQuest("LiJoe")}
             >
-              LIJoe
+              LI Joe
             </div>
           </div>
           <div className="h-17 w-17 border-2 border-black/30 rounded-sm flex justify-center items-center">

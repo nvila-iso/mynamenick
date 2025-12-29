@@ -16,11 +16,11 @@ const LiJoe = ({ setActiveQuest }) => {
       </div>
       <div className="flex flex-col">
         <p className="text-center font-semibold mt-3 mb-3 border-1 border-zinc-500 rounded-xs p-1 ">
-          LiJoe's Youtube & Twitch Channel (1 year)
+          LiJoe's YouTube & Twitch Channel (1 year)
         </p>
         <p>
-          Collaborated with LIJoe to manage and grow his online presence by
-          editing Twitch VODs for Youtube, designing channel logos, video
+          Collaborated with LI Joe to manage and grow his online presence by
+          editing Twitch VODs for YouTube, designing channel logos, video
           packages and producing tournament content. Highlights include
           co-running "Beta Bash", one of the first Street Fighter V beta
           tournaments, where I created all promotional graphics and developed a

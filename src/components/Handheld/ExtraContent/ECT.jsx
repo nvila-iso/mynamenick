@@ -20,7 +20,7 @@ const ECT = ({ setActiveQuest }) => {
       <p>
         Assisted (and ran one) in organizing one of the East Coast's premier
         fighting game tournaments alongside SweetJohnnyCage (John Gallagher) &
-        LIJoe (Joe Ciaramelli). Contributed to venue coordination, prize
+        LI Joe (Joe Ciaramelli). Contributed to venue coordination, prize
         distribution, tournament logistics, and live stream production, helping
         establish ECT as a historical event in the Fighting Game Community
         (FGC).
