@@ -65,7 +65,7 @@ const Flipbook = () => {
           <button
             className="bg-[#6494AA] text-white flex flex-col p-2 rounded-md shadow-[#2B444F] shadow-[-5px_5px_0px_rgba(0,0,0,1)] hover:shadow-[-5px_-5px_0px_rgba(0,0,0,1)] transition-all"
             onClick={() =>
-              window.open("/pdf/NickVilaResume-2025.pdf", "_blank")
+              window.open("/pdf/NickVilaResume-2025v2.pdf", "_blank")
             }
           >
             normal resume

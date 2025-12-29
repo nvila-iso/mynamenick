@@ -14,16 +14,16 @@ const BMW = ({ setActiveQuest }) => {
           Special Assigment
         </p>
       </div>
-      <p className="text-center font-semibold mt-3 mb-3 border-1 border-zinc-500 rounded-xs p-1 ">
-        BMW National Aftersales Conference (NAC)
+      <p className="text-center font-semibold mt-1 mb-1 border-1 border-zinc-500 rounded-xs p-1 ">
+        BMW's National Aftersales Conference (NAC)
       </p>
       <p>
-        Selected twice in a row to lead the network setup for BMW's largest
-        North American annual event. Oversaw wiring and configuration to ensure
-        roughly 50 staff booths and over 3,000 participants had reliable
-        internet access, coordinating closely with venue teams and mapping
-        optimal cable runs. Balanced this role while also representing BMW's
-        flagship diagnostic program at its own booth.
+        Twice selected to lead the network setup for BMW's largest North
+        American annual event. Oversaw wiring and configuration to ensure staff
+        booths and participants had reliable internet access, coordinating
+        closely with venue teams and mapping optimal cable runs. Balanced this
+        role while also representing one of the Aftersales software booths,
+        which supports BMW's flagship diagnostic programs.
       </p>
     </>
   );

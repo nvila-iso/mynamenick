@@ -6,67 +6,88 @@ const Experience = () => {
     <>
       <ScreenTemplate>
         <p className="text-center text-lg">EXPERIENCE LEVELS</p>
-        <div id="scroll-area" className="border-2 border-zinc-500 p-1 rounded-md text-sm flex flex-col gap-2 max-h-screen overflow-auto">
-          <div className="flex items-center gap-2">
-            <p className="bg-zinc-600 text-[#c2c0bc] text-center w-[70px] p-1">
-              Level 1
-            </p>
-            <p>
-              <strong>EB Games / Gamestop (5+ years)</strong>
-            </p>
+        <div
+          id="scroll-area"
+          className="border-2 border-zinc-500 p-1 rounded-md text-sm flex flex-col gap-2 max-h-screen overflow-auto"
+        >
+          {/* BONUS */}
+          <div className="flex flex-col">
+            <div className="flex gap-1 items-center">
+              <p className="w-38 text-center bg-zinc-600 text-[#c2c0bc] px-2 py-1">
+                Bonus Stage
+              </p>
+              <p className="font-bold">
+                FullStack Academy <span>(3 months full-time)</span>
+              </p>
+            </div>
+            <p>Certificate in Full-Stack Development</p>
+            <hr className="opacity-20" />
           </div>
-          <p>Retail, Sales, Customer Service</p>
-          <hr className="opacity-20" />
-          <div className="flex items-center gap-2">
-            <p className="bg-zinc-600 text-[#c2c0bc] p-1 text-center w-[70px]">
-              Level 2
-            </p>
+
+          {/* FIVE */}
+          <div className="flex flex-col">
+            <div className="flex gap-1 items-center">
+              <p className="w-23 bg-zinc-600 text-[#c2c0bc] px-2 py-1 text-center">
+                Level 5
+              </p>
+              <p className="font-bold">Muratek (MSP/IT +10yrs)</p>
+            </div>
             <p>
-              <strong>Journey's Sneakers (8 years)</strong>
+              Technical support, management, problem-solving, project planning.
             </p>
+            <hr className="opacity-20" />
           </div>
-          <p>Team Leadership, Reliability</p>
-          <hr className="opacity-20" />
-          <div className="flex items-center gap-2">
-            <p className="bg-zinc-600 text-[#c2c0bc] p-1 text-center w-[70px]">
-              Level 3
-            </p>
+          {/* FOUR */}
+          <div className="flex flex-col">
+            <div className="flex gap-1 items-center">
+              <p className="w-23 bg-zinc-600 text-[#c2c0bc] px-2 py-1 text-center">
+                Level 4
+              </p>
+              <p className="font-bold">BMW of America (~3 yrs)</p>
+            </div>
             <p>
-              <strong>Restaurant Industry (5 years)</strong>
+              Technical expertise, professional environment skills,
+              organizational / project skills.
             </p>
+            <hr className="opacity-20" />
           </div>
-          <p>Service, Adaptability, Multitasking</p>
-          <hr className="opacity-20" />
-          <div className="flex items-center gap-2">
-            <p className="bg-zinc-600 text-[#c2c0bc] p-1 text-center w-[70px]">
-              Level 4
-            </p>
-            <p>
-              <strong>Network Engineer / QA (3 years)</strong>
-            </p>
+
+          {/* THREE */}
+          <div className="flex flex-col">
+            <div className="flex gap-1 items-center">
+              <p className="w-23 bg-zinc-600 text-[#c2c0bc] px-2 py-1 text-center">
+                Level 3
+              </p>
+              <p className="font-bold">Sushi Ya & Orchid (5 yrs)</p>
+            </div>
+            <p>Service, adaptability, multitasking</p>
+            <hr className="opacity-20" />
           </div>
-          <p>
-            Technical Expertise, Professional Environment Skills,
-            Organizational/Project Skills
-          </p>
-          <hr className="opacity-20" />
-          <div className="flex items-center gap-2">
-            <p className="bg-zinc-600 text-[#c2c0bc] p-1 text-center w-[70px]">
-              Level 5
-            </p>
-            <p>
-              <strong>MSP/IT (10+ years)</strong>
-            </p>
+
+          {/* TWO */}
+          <div className="flex flex-col">
+            <div className="flex gap-1 items-center">
+              <p className="w-23 bg-zinc-600 text-[#c2c0bc] px-2 py-1 text-center">
+                Level 2
+              </p>
+              <p className="font-bold">Journey's Sneakers (~8yrs)</p>
+            </div>
+            <p>Team leadership, reliability, coordination</p>
+            <hr className="opacity-20" />
           </div>
-          <p>Technical Support, Management, Problem-Solving</p>
-          <hr className="opacity-20" />
-          <div className="flex items-center gap-2">
-            <p className="bg-zinc-600 text-[#c2c0bc] p-1">Bonus Stage</p>
-            <p>
-              <strong>FullStack Academy</strong>
-            </p>
+
+          {/* ONE */}
+          <div className="flex flex-col">
+            <div className="flex gap-1 items-center">
+              <p className="w-23 bg-zinc-600 text-[#c2c0bc] px-2 py-1 text-center">
+                Level 1
+              </p>
+              <p className="font-bold">EB Games/Gamestop (+5yrs)</p>
+            </div>
+            <p>Retail, sales, customer service</p>
+            <hr className="opacity-20" />
           </div>
-          <p>Certificate in Full-Stack Development</p>
+
           <img
             src={question}
             id="mobile-question"

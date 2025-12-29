@@ -35,7 +35,7 @@ const Controls = () => {
             <fieldset className="border-1 border-zinc-500 text-sm rounded-sm">
               <legend className="font-semibold">Other Tools</legend>
               <p className="px-1">
-                Adobe Suite, OBS Studio, Figma, Twitch & Youtube
+                Adobe Suite, OBS Studio, Figma, Twitch & YouTube
               </p>
             </fieldset>
           </form>

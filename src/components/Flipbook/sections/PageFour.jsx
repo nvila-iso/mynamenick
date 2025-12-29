@@ -7,42 +7,63 @@ const PageFour = forwardRef((_, ref) => {
     <PageLayout ref={ref} title="Extra Content" pageNumber={4}>
       <p className="text-2xl font-bold text-center">BONUS CONTENT</p>
       <hr className="text-black/30" />
-      <div className="flex flex-col gap-2 px-1">
-        <p>
-          <strong>Side Quest: </strong>
-          <span className="italic">LIJoe's Youtube Channel (1 year)</span>{" "}
-          <br />
-          Collaborated with LIJoe to manage and grow his online presence by
-          editing Twitch VODs for Youtube, designing channel logos and video
-          packages, and producing tournament content. Highlights include
-          co-running "Beta Bash", one of the first Street Fighter V beta
-          tournaments, where I created all promotional graphics and developed a
-          custom animated scoreboard in After Effects.
-        </p>
-        <p>
-          <strong>Special Assignment: </strong>
-          <span className="italic">
-            BMW National Aftersales Conference (NAC)
-          </span>
-          <br />
-          Selected twice to lead the network setup for BMW's largest North
-          American annual event. Oversaw wiring and configuration to ensure
-          staff booths and participants had reliable internet access,
-          coordinating closely with venue teams and mapping optimal cable runs.
-          Balanced this role while also representing one of the Aftersales
-          software booth, which supports BMW's flagship diagnostic programs
-        </p>
-        <p>
-          <strong>Secret Mission: </strong>
-          <span className="italic">East Coast Throwdown (2009 - 2015)</span>
-          <br />
-          Assisted (and ran 1) in organizing one of the East Coast's premier
-          fighting game tournaments alongside SweetJohnnyCage (John Gallagher)
-          and LIJoe (Joe Ciaramelli). Contributed to bracket running, venue
-          coordination, prize distribution, tournament logistics, and live
-          stream production, helping establish ECT as a historical event in the
-          FGC.
-        </p>
+      <div className="flex flex-col gap-5 p-1">
+        {/* SECTION ONE */}
+        <div className="flex flex-col gap-1">
+          <div className="flex gap-1 items-center">
+            <p className="bg-black px-2 py-1 text-[#f7ddb0] font-bold">
+              Side Quest
+            </p>
+            <p className="font-semibold">LI Joe's Youtube Channel (1 year)</p>
+          </div>
+          <p className="text-sm font-medium">
+            Collaborated with LI Joe to manage and grow his online presence by
+            editing Twitch VODs for YouTube, designing channel logos and video
+            packages, and producing tournament content. Highlights include
+            co-running "Beta Bash", one of the first Street Fighter 6 beta
+            tournaments, where I created all promotional graphics and developed
+            a custom animated scoreboard in After Effects.
+          </p>
+        </div>
+        {/* SECTION TWO */}
+        <div className="flex flex-col gap-1">
+          <div className="flex gap-1 items-center ">
+            <p className="px-2 py-1 bg-black font-bold text-[#f7ddb0]">
+              Special Assignment
+            </p>
+            <p className="font-bold">
+              BMW's National Aftersales Conference (NAC)
+            </p>
+          </div>
+          <p className="text-sm font-medium">
+            Twice selected to lead the network setup for BMW's largest North
+            American annual event. Oversaw wiring and configuration to ensure
+            staff booths and participants had reliable internet access,
+            coordinating closely with venue teams and mapping optimal cable
+            runs. Balanced this role while also representing one of the
+            Aftersales software booths, which supports BMW's flagship diagnostic
+            programs.
+          </p>
+        </div>
+        {/* SECTION THREE */}
+        <div className="flex flex-col gap-1">
+          <div className="flex gap-1 items-center">
+            <p className="bg-black px-2 py-1 font-bold text-[#f7ddb0]">
+              Secret Mission
+            </p>
+            <p className="font-bold">East Coast Throwdown (2009 - 2015)</p>
+          </div>
+          <p className="text-sm font-medium">
+            Grew from volunteer staff to leading all event operations for one of
+            the East Coast's premier fighting game tournaments alongside
+            SweetJohnnyCage (John Gallagher) and LI Joe (Joe Ciaramelli).
+            Successfully directed ECT from end-to-end, managing bracket
+            operations, venue coordination, prize distribution, tournament
+            logistics, and live stream production. Played a key role in
+            establishing ECT as a landmark annual event in the Fighting Game
+            Community.
+          </p>
+        </div>
       </div>
       <img
         src={treasure}

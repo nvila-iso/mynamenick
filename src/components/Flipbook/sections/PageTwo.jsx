@@ -66,7 +66,7 @@ const PageTwo = forwardRef((_, ref) => {
             <li>Adobe Suite</li>
             <li>OBS Studio</li>
             <li>
-              Twitch & Youtube <br />
+              Twitch & YouTube <br />
               (Live Stream Tools)
             </li>
           </ul>
