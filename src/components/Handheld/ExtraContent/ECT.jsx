@@ -14,16 +14,17 @@ const ECT = ({ setActiveQuest }) => {
           Secret Mission
         </p>
       </div>
-      <p className="text-center font-semibold mt-3 mb-3 border-1 border-zinc-500 rounded-xs p-1 ">
+      <p className="text-center font-semibold mt-1  border-1 border-zinc-500 rounded-xs px-1 ">
         East Coast Throwdown (ECT): 2009 - 2015
       </p>
       <p>
-        Assisted (and ran one) in organizing one of the East Coast's premier
-        fighting game tournaments alongside SweetJohnnyCage (John Gallagher) &
-        LI Joe (Joe Ciaramelli). Contributed to venue coordination, prize
-        distribution, tournament logistics, and live stream production, helping
-        establish ECT as a historical event in the Fighting Game Community
-        (FGC).
+        Grew from volunteer staff to leading all event operations for one of the
+        East Coast's premier fighting game tournaments alongside SweetJohnnyCage
+        (John Gallagher) and LI Joe (Joe Ciaramelli). Successfully directed ECT
+        from end-to-end, managing bracket operations, venue coordination, prize
+        distribution, tournament logistics, and live stream production. Played a
+        key role in establishing ECT as a landmark annual event in the Fighting
+        Game Community.
       </p>
     </>
   );
